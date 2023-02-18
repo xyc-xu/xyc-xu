@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>博客列表页</title>
+    <title>登录页</title>
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/blog_list.css">
+    <link rel="stylesheet" href="css/blog-login.css">
 </head>
 <body>
     <!-- 导航栏 -->
@@ -19,53 +19,26 @@
         <a href="blog_edit.html">写博客</a>
         <a href="blog_login.html">注销</a>
     </div>
-    <!-- 版心 -->
-    <div class="container">
-        <!-- 左侧区域，显示用户信息 -->
-        <div class="container-left">
-            <!-- 用户详情 -->
-            <div class="card">
-                <!-- 用户的头像 -->
-                <img src="image/head.jpg" alt="">
-                <!-- 用户名 -->
-                <h3>吞吞吐吐大魔王</h3>
-                <!-- 其它信息 -->
-                <a href="https://blog.csdn.net/weixin_51367845?type=blog">CSDN 地址</a>
-                <a href="#">GitHub 地址</a>
-                <!-- 文章分类 -->
-                <div class="counter">
-                    <span>文章</span>
-                    <span>分类</span>
-                </div>
-                <div class="counter">
-                    <span>2</span>
-                    <span>1</span>
-                </div>
+    <!-- 登录页面的版心 -->
+    <div class="login-container">
+        <div class="login-dialog">
+            <h3>登录</h3>
+            <div class="row1">
+                <span>用户名</span>
+                <input type="text" id="username">
             </div>
-        </div>
-        <!-- 右侧区域，显示博客列表 -->
-        <div class="container-right">
-            <!-- 每个 blog 代表一篇博客 -->
-            <div class="blog">
-                <div class="title">第一篇博客</div>
-                <div class="date">2022-2-16</div>
-                <div class="desc">
-                    中国人的性情是喜欢调和折中的，譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如果你主张拆掉屋顶他们就来调和，愿意开窗了。
-                </div>
-                <a href="blog_detail.html" class="detail">查看全文&gt;&gt;</a>
+            <div class="row1">
+                <span>密码</span>
+                <input type="password" id="password">
             </div>
-            <div class="blog">
-                <div class="title">第二篇博客</div>
-                <div class="date">2022-2-16</div>
-                <div class="desc">
-                    中国人的性情是喜欢调和折中的，譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如果你主张拆掉屋顶他们就来调和，愿意开窗了。
-                </div>
-                <a href="blog_detail.html" class="detail">查看全文&gt;&gt;</a>
+            <div class="row2">
+                <input type="button" value="提交" id="submit">
             </div>
         </div>
     </div>
 </body>
 </html>
+
 
 
 
