@@ -1,154 +1,218 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>叮当电影 - 搜罗全网好电影</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <!--logo-->
+        <a href="index.html" class="logo"></a>
+        <!--导航标签-->
+        <div class="nav">
+            <ul class="navbar">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="movie.html">购票</a></li>
+                <li><a href="javascript:;">影院</a></li>
+                <li><a href="javascript:;">社区</a></li>
+            </ul>
+        </div>
+        <!--购物车-->
+        <div class="headcart">
+            <i class="cart-icon"></i>
+            <b class="card-num"></b>
+            <div class="card-tip"></div>
+        </div>
+        <!--用户登陆注册-->
+        <div class="user">
+            <div class="userout">
+                <a href="login.html" class="login cur">登录</a>
+                <a href="register.html" class="register cur">注册</a>
+            </div>
+            <div class="userin">
+                <a href="javascript:;" class="menu-item-user">
+                    <img class="user-face" src="./imgs/userface.jpg" alt="userface">
+                    <span class="user-name"></span>
+                </a>
+                <span class="caret"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:;">个人中心</a></li>
+                    <li><a href="javascript:;">退出登录</a></li>
+                </ul>
+            </div>
+        </div>
 
-.about {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+            <ul>
+                <li>
+                    <table class="slidey-list-table">
+                        <tr>
+                            <td rowspan="2" class="slidey-list-img">
+                                <div></div>
+                            </td>
+                            <td class="slidey-list-title"></td>
+                        </tr>
+                        <tr>
+                            <td class="slidey-list-description"></td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table class="slidey-list-table">
+                        <tr>
+                            <td rowspan="2" class="slidey-list-img">
+                                <div></div>
+                            </td>
+                            <td class="slidey-list-title"></td>
+                        </tr>
+                        <tr>
+                            <td class="slidey-list-description"></td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table class="slidey-list-table">
+                        <tr>
+                            <td rowspan="2" class="slidey-list-img">
+                                <div></div>
+                            </td>
+                            <td class="slidey-list-title"></td>
+                        </tr>
+                        <tr>
+                            <td class="slidey-list-description"></td>
+                        </tr>
+                    </table>
+                </li>
+                <li>
+                    <table class="slidey-list-table">
+                        <tr>
+                            <td rowspan="2" class="slidey-list-img">
+                                <div></div>
+                            </td>
+                            <td class="slidey-list-title"></td>
+                        </tr>
+                        <tr>
+                            <td class="slidey-list-description"></td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-.about_bgc {
-    width: 100%
-}
+    <div class="movie-grid">
+        <div class="panel">
+            <div class="main">
+                <div class="panel-header">
+                    <span class="panel-title">正在热映（<span>20</span>部）</span>
+                    <a href="javascript:;" class="panel-more">更多</a>
+                </div>
+                <div class="movie-list">
+                    <ul>
+                        <li>
+                            <a href="movie.html" class="movie-poster">
+                                <img src="./imgs/poster/bingxueqiyuan2.jpg" alt="" class="poster">
+                                <span class="movie-score">8.0</span>
+                            </a>
+                            <span class="movie-title">斤斤计较急急急急急急</span>
+                            <a href="movie.html" class="movie-ticket-buy">选座购票</a>
+                        </li>
+                        <li>
+                            <a href="movie.html" class="movie-poster">
+                                <img src="./imgs/poster/chuixiaoren.jpg" alt="" class="poster">
+                                <span class="movie-score">8.5</span>
+                            </a>
+                            <span class="movie-title">吹哨人</span>
+                            <a href="movie.html" class="movie-ticket-buy">选座购票</a>
+                        </li>
+                        <li>
 
-.about_tit {
-    position: absolute;
-    top: 280px;
-    left: 0;
-    right: 0;
-    font-size: 28px;
-    font-weight: 550;
-    bottom: 0;
-    width: 800px;
-    margin: auto;
-    text-align: center;
-}
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">4</span>
+                                <p class="movie-rank-name">吹哨人</p>
+                                <span class="box-office">900人想看</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">5</span>
+                                <p class="movie-rank-name">大约在冬季</p>
+                                <span class="box-office">800人想看</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">6</span>
+                                <p class="movie-rank-name">吹哨人</p>
+                                <span class="box-office">700人想看</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">7</span>
+                                <p class="movie-rank-name">天·火</p>
+                                <span class="box-office">600人想看</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">8</span>
+                                <p class="movie-rank-name">一生有你</p>
+                                <span class="box-office">550人想看</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">
+                                <span class="movie-rank-num">9</span>
+                                <p class="movie-rank-name">冰雪奇缘2</p>
+                                <span class="box-office">450人想看</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-.ribbon {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    right: 300px;
-    top: 50px;
-    margin: auto;
-}
+<footer class="footer">
+    <div class="container">
+        <div class="link-nav">
+            <ul>
+                <li><a href="javascript:;">关于叮当</a></li>
+                <li><a href="javascript:;">加入我们</a></li>
+                <li><a href="javascript:;">联系我们</a></li>
+                <li><a href="javascript:;">隐私政策</a></li>
+                <li><a href="javascript:;">问题反馈</a></li>
+            </ul>
+            <div class="copyright">Copyright © 2019 叮当电影</div>
+        </div>
+        <div class="sns">
+            <a href="javascript:;" class="sina-icon icon"></a>
+            <a href="javascript:;" class="wechat-icon icon"></a>
+            <a href="javascript:;" class="rss-icon icon"></a>
+        </div>
+    </div>
+</footer>
+<div id="toTop"></div>
 
-.ribbon:after,
-.ribbon:before {
-    margin-top: 0.5em;
-    content: "";
-    display: flex;
-    ;
-    border: 1.5em solid #fff;
-}
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/slidey.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        setPage("index.html");
+        initPublic();
+        initScrollToTop();
+        new initSlidey();
+    };
+</script>
+</body>
+</html>
 
-.ribbon:after {
-    border-right-color: transparent;
-}
 
-.ribbon:before {
-    border-left-color: transparent;
-}
 
-.ribbon a:link,
-.ribbon a:visited {
-    color: #000;
-    text-decoration: none;
-    height: 3.5em;
-    overflow: hidden;
-}
 
-.ribbon span {
-    background: #fff;
-    display: inline-block;
-    line-height: 3em;
-    padding: 0 1.5em;
-    margin-top: 0.5em;
-    position: relative;
-    -webkit-transition: background-color 0.2s, margin-top 0.2s;
-    /* Saf3.2+, Chrome */
-    -moz-transition: background-color 0.2s, margin-top 0.2s;
-    /* FF4+ */
-    -ms-transition: background-color 0.2s, margin-top 0.2s;
-    /* IE10 */
-    -o-transition: background-color 0.2s, margin-top 0.2s;
-    /* Opera 10.5+ */
-    transition: background-color 0.2s, margin-top 0.2s;
-}
 
-.ribbon a:hover span {
-    background: #FFD204;
-    margin-top: 0;
-}
-
-.ribbon span:before {
-    content: "";
-    position: absolute;
-    top: 3em;
-    left: 0;
-    border-right: 0.5em solid #9B8651;
-    border-bottom: 0.5em solid #fff;
-}
-
-.ribbon span:after {
-    content: "";
-    position: absolute;
-    top: 3em;
-    right: 0;
-    border-left: 0.5em solid #9B8651;
-    border-bottom: 0.5em solid #fff;
-}
-
-.me {
-    display: flex;
-    justify-content: center;
-    margin-top: 60px;
-    overflow: hidden;
-}
-
-.me_tit {
-    width: 600px;
-    line-height: 36px;
-    font-size: 18px;
-    margin-left: 100px;
-    margin-top: 50px;
-}
-
-.me_img {
-    width: 800px;
-    height: 600px;
-}
-
-.animate {
-    padding-left: 20px;
-    width: 500px;
-    font-size: 16px;
-    color: #000;
-    animation: 10s wordsLoop linear infinite normal;
-}
-
-@keyframes wordsLoop {
-    0% {
-        transform: translateY(100px);
-        -webkit-transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(-100%);
-        -webkit-transform: translateY(-100%);
-    }
-}
-
-.videos {
-    display: flex;
-    margin-top: 60px;
-    padding-bottom: 80px;
-}
-
-.videos span {
-    width: 400px;
-    margin-right: 100px;
-    margin-left: 300px;
-    color: #FFD204
-}
