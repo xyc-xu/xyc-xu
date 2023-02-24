@@ -1,58 +1,78 @@
-<!--
-       留言板
-             实现思路：
-               1.获取用户姓名与留言内容
-               2.判断值是否为空，如果为空，则提示信息
-               3.绑定提交按钮的点击事件
-               4.获取姓名，留言内容以及当前系统时间，拼接成指定的html标签
-               5.将标签追加到留言表中
--->
-  <script>
-        // 发送留言
-        $("#sendBtn").click(function(){
-                //获取用户姓名
-                var  userName = $("#userName").val();
-                //判断非空
-                if(userName == null || userName.trim() == ""){
-                      $("#msg").html("用户姓名不能为空！");
-                      return;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        padding: 100px;
+    }
+
+    textarea {
+        width: 200px;
+        height: 100px;
+        border: 1px pink solid;
+        /* 不设置轮廓 */
+        outline: none;
+        /* 设置其不能改变长宽 */
+        resize: none;
+    }
+
+    li {
+        width: 300px;
+        padding: 5px;
+        background-color: #eee;
+        font-size: 15px;
+        margin: 15px 0;
+    }
+
+    li a {
+        float: right;
+    }
+</style>
+
+<body>
+    <textarea></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+        //1、获取元素
+        var txt = document.querySelector("textarea");
+        var btn = document.querySelector("button");
+        var ul = document.querySelector("ul");
+        //2、给button绑定点击事件
+        btn.onclick = function () {
+            if (txt.value == "") {//当文本框中没有文字时，提示
+                alert("您没有输入内容")
+            } else {
+                //创建元素li作为留言区
+                var li = document.createElement("li");
+                //将文本框中的内容放到li中,a标签中href中的内容代表什么都不执行
+                li.innerHTML = txt.value + "<a href='javascript:;'>删除</a>"
+                txt.value = "";//添加之后文本框的内容清空
+                //将留言添加到ul中，而且在最上方
+                ul.insertBefore(li, ul.children[0]);
+                //当点击删除时删除ul中的li
+                var as = document.querySelectorAll("a");
+                //循环给每个删除绑定事件
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function () {
+                        //删除当前a标签所在位置的父节点li
+                        ul.removeChild(this.parentNode);
+                    }
                 }
-                //获取留言内容
-                var  content= $("#content").val();
-
-                //判断非空
-
-                if(content.trim() == ""){
-                         $("#msg").html("请输入留言内容！");
-                         return;
-                }  
-
-            //留言数据
-
-            var  msg = "<li><h4>"+userName+"</h4><small>"+formatDate()+"</small>";
-                msg +="<div>"+content+"</div></li>";
-
-            //将留言内容追加到留言板中
-
-            $("#msgBoard").prepend(msg);
-            
-
-            //清空内容与提示信息
-
-            $("#userName").val("");
-            $("#content").val("");
-            $("msg").val("");
-                
-        });
-        
-        //格式化时间
-        function formatDate(){
-                  //获取系统当前时间
-                  var  date = new  Date();
-                  //获取年月日时分秒
-                  var str = date.getFullYear()+"-"+(parseInt(date.getMonth())+1)+"-"+date.getDate();
-                  str +" "+ date.getHours +":"+ date.getMinutes()+":"+date.getSeconds();
-
-                  return  str;
+            }
         }
-  </script>
+    </script>
+</body>
+
+</html>
